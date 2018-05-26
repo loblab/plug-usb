@@ -27,7 +27,7 @@ plug_in() {
     local rc=$?
     if [ $rc -eq 0 ]; then
       echo "The device $vid:$pid is already plugged in. Quit"
-      exit 11 
+      exit 11
     else
       echo "Cannot find plug-out record of device $vid:$pid. Quit"
       exit 12
@@ -41,7 +41,7 @@ plug_in() {
   echo "Found device $vid:$pid at $num"
   echo "Plug in device $num"
   echo $num | $SUDO tee /sys/bus/usb/drivers/usb/bind > /dev/null
-  rm $idfile
+  $SUDO rm $idfile
 }
 
 plug_out() {
@@ -53,7 +53,7 @@ plug_out() {
   echo "Found device $vid:$pid at $num"
   echo "Plug out device $num"
   echo $num | $SUDO tee /sys/bus/usb/drivers/usb/unbind > /dev/null
-  echo $num > $idfile
+  echo $num | $SUDO tee $idfile > /dev/null
 }
 
 init_args $*

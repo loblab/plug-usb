@@ -4,7 +4,7 @@ Plug in/out USB devices by software.
 
 - Platform: Linux (tested on Debian 9.x, kernel 4.9.x)
 - Ver: 0.1
-- Updated: 4/26/2018
+- Updated: 5/26/2018
 - Created: 4/26/2018
 - Author: loblab
 
@@ -12,8 +12,8 @@ Plug in/out USB devices by software.
 
 I use a USB HDD holder (supports 4 disks) connected with a Linux server for daily backup.
 It is not power saving in idle (21 watt with 2 disks installed).
-If unplug the device, the power fall down to 6 watt.
-So we can disconnect the device by software.
+If unplug the device, the power consumption falls down to 6 watt.
+So we can disconnect the device by software to save power.
 
 ## Usage
 

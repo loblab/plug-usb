@@ -11,3 +11,4 @@ if [ -z "$1" ]; then
 fi
 
 plug-usb $1 $vid $pid
+
